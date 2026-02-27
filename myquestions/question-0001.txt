@@ -1,3 +1,5 @@
+Pregunta 1:
+
 Una técnica ampliamente utilizada para reducir dimensionalidad sin perder demasiada información es el Análisis de Componentes Principales (PCA), que transforma las variables originales en nuevas variables no correlacionadas llamadas componentes principales, ordenadas según la cantidad de varianza que explican.
 Sin embargo, en muchos escenarios no se conoce de antemano cuántos componentes principales deben conservarse. En lugar de fijar un número arbitrario de componentes, es más adecuado seleccionar el mínimo número de componentes necesarios para explicar al menos una proporción determinada de la varianza total del conjunto de datos.
 La tarea consiste en implementar una función en Python que determine automáticamente ese número mínimo de componentes principales.
