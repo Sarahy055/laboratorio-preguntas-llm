@@ -1,1 +1,35 @@
+Pregunta 4:
+En tareas como clustering, recomendación o análisis de similitud, es común medir qué tan parecidas son las observaciones entre sí. Una medida ampliamente utilizada es la similitud coseno, que evalúa el ángulo entre vectores.
 
+Sin embargo, cuando las variables tienen escalas diferentes, es necesario estandarizar los datos antes de calcular similitudes para evitar sesgos por magnitud.
+
+Dispone de una matriz numérica donde cada fila representa una observación y cada columna una característica.
+
+La tarea consiste en:
+
+- Estandarizar todas las variables usando media 0 y desviación estándar 1.
+- Calcular la similitud coseno entre todas las parejas de observaciones.
+
+Se debe de implementar la función:
+
+def matriz_similitud_coseno(X)
+
+Argumentos de entrada
+
+- X: numpy array bidimensional con datos numéricos.
+
+Proceso que debe realizar la función
+
+- Ajustar un StandardScaler sobre X.
+- Transformar los datos.
+- Calcular la matriz de similitud coseno entre filas.
+
+Valor de retorno
+
+- La función debe devolver únicamente:
+- Un numpy array cuadrado (n_samples × n_samples) con la similitud coseno.
+
+Restricciones
+
+- Se debe usar sklearn.preprocessing.StandardScaler.
+- Debe usar sklearn.metrics.pairwise.cosine_similarity.
