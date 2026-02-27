@@ -1,1 +1,32 @@
+Pregunta 2:
 
+En problemas de clasificación binaria, no basta con medir la exactitud del modelo, ya que esta métrica puede ser engañosa cuando las clases están desbalanceadas. Una medida más robusta del desempeño es el Área Bajo la Curva ROC (ROC AUC), que evalúa la capacidad del modelo para discriminar entre las clases usando probabilidades de predicción.
+Dispone de un conjunto de datos almacenado en un DataFrame de pandas, que contiene varias columnas numéricas predictoras y una columna que representa la variable objetivo binaria.
+La tarea consiste en entrenar un modelo de regresión logística usando todas las variables predictoras y calcular el valor del ROC AUC sobre el mismo conjunto de datos.
+
+Se debe emplear la función:
+def calcular_auc_logistico(df, target_col)
+
+Argumentos de entrada
+
+- df: DataFrame de pandas que contiene variables predictoras numéricas y la variable objetivo.
+- target_col: string con el nombre de la columna objetivo binaria.
+
+Proceso que debe realizar la función
+
+- Separar las variables predictoras (X) y la variable objetivo (y).
+- Ajustar un modelo de regresión logística con los datos.
+- Obtener las probabilidades predichas para la clase positiva.
+- Calcular el valor del ROC AUC usando esas probabilidades.
+
+Valor de retorno
+
+- La función debe devolver únicamente:
+- Un float que represente el ROC AUC del modelo.
+
+Restricciones
+
+- Se debe usar pandas para manipulación de datos.
+- Se debe usar sklearn.linear_model.LogisticRegression.
+- Se debe usar sklearn.metrics.roc_auc_score.
+- No se debe dividir en train/test (evaluación en mismo conjunto).
