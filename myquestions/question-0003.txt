@@ -1,1 +1,34 @@
+Pregunta 3:
+En muchos conjuntos de datos, las observaciones pertenecen a diferentes grupos o categorías (por ejemplo: regiones, tipos de clientes, hospitales, especies, etc.). Cuando las distribuciones de las variables numéricas difieren significativamente entre grupos, puede ser necesario normalizar los datos dentro de cada grupo por separado.
+Una forma común de normalización es el z-score, que transforma cada valor restando la media del grupo y dividiendo por la desviación estándar del grupo.
+Dispone de un DataFrame que contiene:
+una columna categórica que indica el grupo al que pertenece cada observación
+varias columnas numéricas
+La tarea es normalizar todas las variables numéricas dentro de cada grupo usando z-score.
 
+Se debe de implementar la función:
+
+def normalizar_por_grupo(df, group_col)
+
+Argumentos de entrada
+
+- df: DataFrame de pandas con variables numéricas y una columna categórica de grupo.
+- group_col: string con el nombre de la columna de grupo.
+
+Proceso que debe realizar la función
+
+- Identificar las columnas numéricas (todas excepto la columna de grupo).
+- Agrupar el DataFrame por la columna de grupo.
+- Para cada grupo, calcular media y desviación estándar de cada variable.
+- Transformar cada valor al z-score correspondiente dentro de su grupo.
+
+Valor de retorno
+
+- La función debe devolver únicamente:
+- Un numpy array con los valores normalizados (sin incluir la columna de grupo).
+
+Restricciones
+
+- Se deben usar pandas para la agrupación.
+- Se debe usar desviación estándar poblacional (ddof = 0).
+- El orden de las filas debe conservarse.
