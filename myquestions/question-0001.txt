@@ -1,1 +1,28 @@
+Una técnica ampliamente utilizada para reducir dimensionalidad sin perder demasiada información es el Análisis de Componentes Principales (PCA), que transforma las variables originales en nuevas variables no correlacionadas llamadas componentes principales, ordenadas según la cantidad de varianza que explican.
+Sin embargo, en muchos escenarios no se conoce de antemano cuántos componentes principales deben conservarse. En lugar de fijar un número arbitrario de componentes, es más adecuado seleccionar el mínimo número de componentes necesarios para explicar al menos una proporción determinada de la varianza total del conjunto de datos.
+La tarea consiste en implementar una función en Python que determine automáticamente ese número mínimo de componentes principales.
 
+Se debe crear una función:
+def calcular_componentes_pca(X, varianza_minima):
+
+Argumentos de entrada
+
+- X: numpy array bidimensional de tamaño (n_samples, n_features) que contiene únicamente variables numéricas.
+- varianza_minima: número float entre 0 y 1 que indica la proporción mínima de varianza acumulada que debe explicarse.
+
+Proceso que debe realizar la función
+
+- Ajustar un modelo PCA sobre la matriz X.
+- Calcular la varianza explicada acumulada por los componentes principales.
+- Identificar el número mínimo de componentes necesarios para que la varianza acumulada sea mayor o igual a varianza_minima.
+
+Valor de retorno
+
+- La función debe devolver únicamente:
+- Un entero que represente el número mínimo de componentes principales requeridos.
+
+Restricciones
+
+- Se debe usar sklearn.decomposition.PCA.
+- No se puede fijar manualmente el número de componentes.
+- La función debe funcionar para cualquier tamaño de matriz válida.
